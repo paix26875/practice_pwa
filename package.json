@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint --ext .vue src/",
-    "lintfix": "npm run lint -- --fix"
+    "lintfix": "npm run lint -- --fix",
+    "format": "prettier --write \"**/*.+(js|json|yml|ts|tsx|vue)\""
   },
   "dependencies": {
     "vue": "^3.2.45"
