@@ -1,2 +1,4 @@
 node_modules/*
 /.idea/git_toolbox_prj.xml
+/.idea/jsLinters/eslint.xml
+/.idea/inspectionProfiles/Project_Default.xml
