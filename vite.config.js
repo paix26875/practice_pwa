@@ -7,10 +7,12 @@ export default defineConfig({
   plugins: [
     vue(),
     VitePWA({
+      injectRegister: 'script',
       registerType: 'autoUpdate',
       devOptions: {
         enabled: true
       },
+      strategies: 'generateSW',
       manifest: {
         name: 'My Awesome App',
         short_name: 'MyApp',
