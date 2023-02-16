@@ -37,8 +37,6 @@ jobs:
         run: npm install
       - name: Build Astro
         run: npm run build
-      - name: replace
-        run: bash replace.sh
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
