@@ -3,7 +3,7 @@
 sed -i "s/Vite/VITE/g" dist/index.html
 
 ls dist/
-
+cat dist/registerSW.js
 svg=$(ls dist/ | grep vite.svg)
 sed -i "s/\/$svg/\/practice_pwa\/$svg/g" dist/index.html
 
