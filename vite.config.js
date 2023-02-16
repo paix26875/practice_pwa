@@ -4,9 +4,11 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  publicDir: 'public',
   plugins: [
     vue(),
     VitePWA({
+      includeAssets: ['robots.txt'],
       injectRegister: 'script',
       registerType: 'autoUpdate',
       devOptions: {
@@ -29,7 +31,8 @@ export default defineConfig({
             sizes: '512x512',
             type: 'image/png'
           }
-        ]
+        ],
+        display: 'standalone'
       }
     })
   ]
