@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     vue(),
     VitePWA({
-      includeAssets: ['robots.txt', 'image/*.png', 'image/*.svg'],
+      includeAssets: ['robots.txt'],
       injectRegister: 'script',
       registerType: 'autoUpdate',
       devOptions: {
