@@ -9,6 +9,7 @@ export default defineConfig({
   plugins: [
     vue(),
     VitePWA({
+      scope: '/practice_pwa/',
       includeAssets: ['robots.txt'],
       injectRegister: 'script',
       registerType: 'autoUpdate',
