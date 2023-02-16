@@ -5,7 +5,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 // https://vitejs.dev/config/
 export default defineConfig({
   publicDir: 'public',
-  bash: '/practice_pwa/',
+  base: '/practice_pwa/',
   plugins: [
     vue(),
     VitePWA({
