@@ -5,11 +5,11 @@ import { VitePWA } from 'vite-plugin-pwa'
 // https://vitejs.dev/config/
 export default defineConfig({
   publicDir: 'public',
-  base: '/practice_pwa/',
+  base: 'https://paix26875.github.io/practice_pwa/',
   plugins: [
     vue(),
     VitePWA({
-      scope: '/practice_pwa/',
+      scope: 'https://paix26875.github.io/practice_pwa/',
       includeAssets: ['robots.txt'],
       injectRegister: 'script',
       registerType: 'autoUpdate',
