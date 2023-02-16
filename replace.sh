@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sed -i "s/Vite/VITE/g" index.html
+
 svg=$(ls dist/ | grep svg)
 sed -i "s/\/$svg/.\/$svg/g" index.html
 
