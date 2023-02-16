@@ -41,7 +41,6 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: dist/*
-          ACTIONS_RUNNER_DEBUG: true
 
   # Deployment job
   deploy:
