@@ -2,7 +2,9 @@
 
 sed -i "s/Vite/VITE/g" dist/index.html
 
-svg=$(ls dist/ | grep svg)
+ls dist/
+
+svg=$(ls dist/ | grep vite.svg)
 sed -i "s/\/$svg/\/practice_pwa\/$svg/g" dist/index.html
 
 js=$(ls dist/assets | grep js)
