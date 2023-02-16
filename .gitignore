@@ -5,4 +5,4 @@
 /.prettierrc.yml
 /.idea/prettier.xml
 /dev-dist/
-
+/dist/
