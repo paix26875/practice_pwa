@@ -36,7 +36,13 @@ export default defineConfig({
           }
         ],
         display: 'standalone'
-      }
+      },
+      related_applications: [
+        {
+          platform: 'play',
+          url: 'https://play.google.com/store/apps/details?id=cheeaun.hackerweb'
+        }
+      ]
     })
   ]
 })
