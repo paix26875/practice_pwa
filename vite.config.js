@@ -18,9 +18,10 @@ export default defineConfig({
       },
       strategies: 'generateSW',
       manifest: {
-        name: 'My Awesome App',
-        short_name: 'MyApp',
-        description: 'My Awesome App description',
+        name: 'Vite + Vue',
+        short_name: 'VitePWA',
+        description:
+          'this app is PWA created with Vite + Vue + Vite Plugin PWA',
         theme_color: '#ffffff',
         icons: [
           {
