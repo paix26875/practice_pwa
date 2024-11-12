@@ -1,4 +1,6 @@
 <script setup>
+import { ref } from 'vue'
+
 const authorizeNotification = () => {
   Notification.requestPermission().then(function (result) {
     if (result === 'granted') {
@@ -11,13 +13,20 @@ function randomNotification() {
     body: '通知だよ〜〜〜',
     icon: 'https://ja.vite.dev/logo.svg'
   }
+  console.log('通知を送信')
   const notify = new Notification('通知のテスト', options)
-  setTimeout(randomNotification, 30000)
+  setTimeout(randomNotification, notificationFrequency.value)
 }
+
+const notificationFrequency = ref(30000)
 </script>
 
 <template>
   <div class="bg-amber-500">Hello, Vue 3! with Vite PWA</div>
+  <label>
+    通知の頻度（ミリ秒）
+    <input class="border-2" v-model="notificationFrequency" />
+  </label>
   <button
     class="bg-amber-600 text-white px-4 py-2 rounded-2xl"
     @click="authorizeNotification()"

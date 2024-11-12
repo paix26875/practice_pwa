@@ -5,9 +5,14 @@ import TailwindCSS from 'tailwindcss'
 import Autoprefixer from 'autoprefixer'
 
 // https://vitejs.dev/config/
+const isProd = process.env.NODE_ENV === 'production'
+const host = isProd
+  ? 'https://paix26875.github.io/practice_pwa/'
+  : 'http://localhost:3000/'
+console.log('isProd', isProd, host)
 
 const pwaBaseConfig = {
-  scope: 'https://paix26875.github.io/practice_pwa/',
+  scope: host,
   includeAssets: ['robots.txt'],
   injectRegister: 'script',
   registerType: 'autoUpdate',
@@ -64,7 +69,7 @@ const customSWConfig = {
 }
 export default defineConfig({
   publicDir: 'public',
-  base: 'https://paix26875.github.io/practice_pwa/',
+  base: host,
   server: {
     port: 3000,
     open: true
