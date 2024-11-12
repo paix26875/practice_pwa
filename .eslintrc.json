@@ -10,5 +10,7 @@
     "sourceType": "module"
   },
   "plugins": ["vue"],
-  "rules": {}
+  "rules": {
+    "no-console": "off"
+  }
 }
