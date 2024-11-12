@@ -9,7 +9,7 @@ const authorizeNotification = () => {
 function randomNotification() {
   const options = {
     body: '通知だよ〜〜〜',
-    icon: 'vite-logo.svg'
+    icon: 'https://ja.vite.dev/logo.svg'
   }
   const notify = new Notification('通知のテスト', options)
   setTimeout(randomNotification, 30000)
