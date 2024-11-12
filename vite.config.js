@@ -1,11 +1,22 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { VitePWA } from 'vite-plugin-pwa'
+import TailwindCSS from 'tailwindcss'
+import Autoprefixer from 'autoprefixer'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   publicDir: 'public',
   base: 'https://paix26875.github.io/practice_pwa/',
+  server: {
+    port: 3000,
+    open: true
+  },
+  css: {
+    postcss: {
+      plugins: [TailwindCSS, Autoprefixer]
+    }
+  },
   plugins: [
     vue(),
     VitePWA({
