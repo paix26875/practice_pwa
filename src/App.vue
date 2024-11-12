@@ -13,11 +13,12 @@ function randomNotification() {
     body: '通知だよ〜〜〜',
     icon: 'https://ja.vite.dev/logo.svg'
   }
+  notificationCount.value++
   console.log('通知を送信')
   const notify = new Notification('通知のテスト', options)
   setTimeout(randomNotification, notificationFrequency.value)
 }
-
+const notificationCount = ref(0)
 const notificationFrequency = ref(30000)
 </script>
 
@@ -33,6 +34,7 @@ const notificationFrequency = ref(30000)
   >
     通知を許可する
   </button>
+  <div>通知の送信回数：{{ notificationCount }}</div>
 </template>
 
 <style scoped></style>
